@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.decodex.sosadmin">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="com.google.android.c2dm.permission.RECIEVE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/bannapod_logo"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/bannapod_logo"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.SosAdmin">
+        <activity android:name=".usersDetails"></activity>
+        <activity android:name=".login">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".users"
+            android:parentActivityName="com.home" />
+        <activity android:name="com.home" />
+        <activity
+            android:name=".request_details"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".MainActivity"
+            android:parentActivityName="com.home"></activity>
+    </application>
+
+</manifest>
